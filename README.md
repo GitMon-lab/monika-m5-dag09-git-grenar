@@ -1,6 +1,6 @@
 # Dag 9 · Git: grenar, merge och konflikter
 
-*Modul 5, UI/UX & Frontendutveckling (TypeScript), Lexicon IT-Proffs*
+_Modul 5, UI/UX & Frontendutveckling (TypeScript), Lexicon IT-Proffs_
 
 ## Vad du ska göra idag
 
@@ -12,8 +12,8 @@ Hittills har du jobbat på en enda gren och bara gått framåt. I verkligheten j
 
 ## Så arbetar du (samma som alltid)
 
-1. **Forka** dagens repo på GitHub (*Fork → Create fork*).
-2. **Klona din fork:** *Code → HTTPS → kopiera adressen*. I terminalen (Ctrl+ö i VS Code): `git clone <adressen>`. Öppna den nya mappen i VS Code.
+1. **Forka** dagens repo på GitHub (_Fork → Create fork_).
+2. **Klona din fork:** _Code → HTTPS → kopiera adressen_. I terminalen (Ctrl+ö i VS Code): `git clone <adressen>`. Öppna den nya mappen i VS Code.
 3. **Gör uppgiften.** Spara och kontrollera i webbläsaren och Console (F12) efter varje steg. Gör en commit efter varje avslutat steg: `git add .` och `git commit -m "Beskriv vad du gjorde"`.
 4. **Skicka upp** när du är klar: `git push`.
 5. **Lämna in i Microsoft Forms.**
@@ -28,7 +28,12 @@ Fastnar du: skriv ner exakt var och vad du försökt (och vilket felmeddelande d
 
 ### Steg 1. Klona och titta runt
 
-Forka repot, kör `git clone`, öppna mappen i VS Code. Kör `git log --oneline --graph --all`, `git branch -a` och `git status`. Klistra in loggen i `docs/git-logg.md` (avsnitt 1). Läs igenom `docs/git-fusklapp.md`.
+Forka repot, kör `git clone`, öppna mappen i VS Code.
+Kör `git log --oneline --graph --all`, `git branch -a` och `git status`.
+Klistra in loggen i `docs/git-logg.md` (avsnitt 1).
+Läs igenom `docs/git-fusklapp.md`.
+
+OK
 
 ### Steg 2. En gren för en ny funktion
 
@@ -40,7 +45,7 @@ Stå på `main`: `git switch main`. Ändra `kafe-info/kontakt.md` (lägg till en
 
 ### Steg 4. Skapa en konflikt med flit
 
-Skapa två grenar från `main` som ändrar SAMMA rad. Gren 1: `git switch -c oppettider-helg`, ändra `Helger: 09–16` till `Helger: 10–17` i `kafe-info/oppettider.md`, commit. Tillbaka: `git switch main`. Gren 2: `git switch -c oppettider-sommar`, ändra samma rad till `Helger: 09–18`, commit. Tillbaka: `git switch main`. Kör `git merge oppettider-helg` (går bra, en så kallad *fast-forward*). Kör sedan `git merge oppettider-sommar`. Nu får du CONFLICT.
+Skapa två grenar från `main` som ändrar SAMMA rad. Gren 1: `git switch -c oppettider-helg`, ändra `Helger: 09–16` till `Helger: 10–17` i `kafe-info/oppettider.md`, commit. Tillbaka: `git switch main`. Gren 2: `git switch -c oppettider-sommar`, ändra samma rad till `Helger: 09–18`, commit. Tillbaka: `git switch main`. Kör `git merge oppettider-helg` (går bra, en så kallad _fast-forward_). Kör sedan `git merge oppettider-sommar`. Nu får du CONFLICT.
 
 ### Steg 5. Lös konflikten
 
@@ -60,7 +65,7 @@ Skapa filerna `.env`, `debug.log` och `node_modules/x.txt` (mappen får du skapa
 
 ### Steg 9. Pull request på ditt eget repo
 
-Skapa en gren `info-uppdatering`, ändra något i `kafe-info/`, committa och kör `git push -u origin info-uppdatering`. På GitHub: *Compare & pull request*. VIKTIGT: ändra *base repository* till ditt EGET repo (som standard föreslår GitHub Lexicon-RC, och det vill du inte). Skriv en beskrivning, klicka *Create pull request* och sedan *Merge pull request*. Lokalt: `git switch main`, `git pull`, `git branch -d info-uppdatering`. Klistra in länken i loggen (avsnitt 5).
+Skapa en gren `info-uppdatering`, ändra något i `kafe-info/`, committa och kör `git push -u origin info-uppdatering`. På GitHub: _Compare & pull request_. VIKTIGT: ändra _base repository_ till ditt EGET repo (som standard föreslår GitHub Lexicon-RC, och det vill du inte). Skriv en beskrivning, klicka _Create pull request_ och sedan _Merge pull request_. Lokalt: `git switch main`, `git pull`, `git branch -d info-uppdatering`. Klistra in länken i loggen (avsnitt 5).
 
 ### Steg 10. Fördjupning (frivillig): stash och cherry-pick
 
