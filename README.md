@@ -49,6 +49,7 @@ git switch meny-nyheter
 
 ### Steg 3. Merge utan konflikt
 
+\*\* BÖrja här
 Stå på `main`: `git switch main`. Ändra `kafe-info/kontakt.md` (lägg till en rad med ett telefonnummer), `git add .` och `git commit -m "Lägg till telefonnummer"`. Slå ihop: `git merge meny-nyheter`. Editorn öppnas för merge-meddelandet: spara och stäng. Kör `git log --oneline --graph --all` och klistra in grafen i `docs/git-logg.md` (avsnitt 2). Besvara frågan om fast-forward.
 
 ### Steg 4. Skapa en konflikt med flit
