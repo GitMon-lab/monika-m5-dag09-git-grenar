@@ -37,7 +37,15 @@ OK
 
 ### Steg 2. En gren för en ny funktion
 
-Skapa en gren: `git switch -c meny-nyheter`. Lägg till en rad sist i `kafe-info/meny.md`, till exempel `- Kanelbulle, 33 kr`. Gör `git add .` och `git commit -m "Lägg till kanelbulle på menyn"`. Kör `git branch` och se att du står på grenen. Titta i `kafe-info/meny.md` på `main`: byt med `git switch main` och se att raden inte finns där. Byt tillbaka och se att den finns.
+Skapa en gren: `git switch -c meny-nyheter`.
+Lägg till en rad sist i `kafe-info/meny.md`, till exempel `- Kanelbulle, 33 kr`.
+
+Gör `git add .` och `git commit -m "Lägg till kanelbulle på menyn"`.
+Kör `git branch` och se att du står på grenen.
+
+Titta i `kafe-info/meny.md` på `main`: byt med `git switch main` och se att raden inte finns där. Byt tillbaka och se att den finns.
+
+git switch meny-nyheter
 
 ### Steg 3. Merge utan konflikt
 
