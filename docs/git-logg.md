@@ -86,3 +86,5 @@ Länk till din pull request (på ditt eget repo):
 ## 6. Reflektion
 
 Vad är det värsta som kan hända om man kör `git push --force` på en gren som andra använder?
+
+Man skriver över andras uppladdade kod med sin egen version
