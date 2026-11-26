@@ -29,11 +29,23 @@ PS C:\ec\lexicon\monika-m5-dag09-git-grenar>
 
 Klistra in `git log --oneline --graph --all` efter merge:
 
-```
-(klistra in)
-```
+:\ec\lexicon\monika-m5-dag09-git-grenar> git log --oneline --graph --all
+
+- 3853e53 (HEAD -> main) Merge branch 'meny-nyheter'
+  |\
+  | \* df30c71 (meny-nyheter) Lägg till kanelbulle på menyn
+- | 0d7fa90 Lägg till telefonnummer
+- | a28bf73 (origin/main, origin/HEAD) Add comment where to start tomorrow in read me
+- | 93a3b94 Create branch meny-nyheter
+  |/
+- eabfd99 Run git log --oneline --graph --all, git branch -a git status
+- 5a5841d Modul 5 i TypeScript med Vite
+- 3804533 Add files via upload
+- f7a13a4 Add files via upload
+- c9a0075 Initial commit
 
 Fråga: Vad är skillnaden mellan en _fast-forward_-merge och en merge som skapar en egen merge-commit? Svara med egna ord:
+fast_forward lägger sig ändringarna på rad, merge-commit så blir det en förgrening/puckel och samlas ihop på slutet
 
 ## 3. Konflikten
 
