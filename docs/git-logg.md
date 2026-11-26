@@ -53,15 +53,31 @@ Klistra in filen med konfliktmarkörerna, precis som den såg ut innan du löste
 
 ```
 (klistra in)
+Vardagar: 07–18
+<<<<<<< HEAD
+Helger: 10–17
+=======
+Helger: 09–18
+>>>>>>> oppettider-sommar
+Röda dagar: stängt
 ```
 
 Fråga: Vad betyder `<<<<<<< HEAD`, `=======` och `>>>>>>> grennamn`?
-
+nuvarande ändring
+inkommit en nyare ändring, nu finns två ändringar på samma gång
 Hur löste du den, och varför blev det så?
+
+Tog bort markörerna och valde Helger 10-18
 
 ## 4. Ångra
 
 Vad är skillnaden mellan `git restore`, `git revert` och `git reset`? Vilken är säkrast när ändringen redan är pushad?
+
+git restore Återställer osparade ändringar i filer (working directory / staging).
+git revert Skapar en ny commit som upphäver en specifik gammal commit.
+git reset Flyttar bakåt i historiken och raderar/återställer tidigare commits.
+
+skapa en ny commit
 
 ## 5. Pull request
 
