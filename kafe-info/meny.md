@@ -5,3 +5,4 @@
 - Ostmacka, 59 kr
 - Latte, 45 kr
 - Kanelbulle, 33 kr
+- Grillad ostmacka, 99 kr
