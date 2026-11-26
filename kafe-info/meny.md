@@ -4,3 +4,5 @@
 - Bryggkaffe, 32 kr
 - Ostmacka, 59 kr
 - Latte, 45 kr
+- Kanelbulle, 33 kr
+- Julmust, 29 kr

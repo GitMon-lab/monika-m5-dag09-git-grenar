@@ -50,19 +50,39 @@ git switch meny-nyheter
 ### Steg 3. Merge utan konflikt
 
 \*\* BÖrja här
-Stå på `main`: `git switch main`. Ändra `kafe-info/kontakt.md` (lägg till en rad med ett telefonnummer), `git add .` och `git commit -m "Lägg till telefonnummer"`. Slå ihop: `git merge meny-nyheter`. Editorn öppnas för merge-meddelandet: spara och stäng. Kör `git log --oneline --graph --all` och klistra in grafen i `docs/git-logg.md` (avsnitt 2). Besvara frågan om fast-forward.
+
+Stå på `main`: `git switch main`. Ändra `kafe-info/kontakt.md` (lägg till en rad med ett telefonnummer),
+`git add .` och `git commit -m "Lägg till telefonnummer"`.
+Slå ihop: `git merge meny-nyheter`. Editorn öppnas för merge-meddelandet: spara och stäng.
+Kör `git log --oneline --graph --all` och klistra in grafen i `docs/git-logg.md` (avsnitt 2). Besvara frågan om fast-forward.
 
 ### Steg 4. Skapa en konflikt med flit
 
-Skapa två grenar från `main` som ändrar SAMMA rad. Gren 1: `git switch -c oppettider-helg`, ändra `Helger: 09–16` till `Helger: 10–17` i `kafe-info/oppettider.md`, commit. Tillbaka: `git switch main`. Gren 2: `git switch -c oppettider-sommar`, ändra samma rad till `Helger: 09–18`, commit. Tillbaka: `git switch main`. Kör `git merge oppettider-helg` (går bra, en så kallad _fast-forward_). Kör sedan `git merge oppettider-sommar`. Nu får du CONFLICT.
+Skapa två grenar från `main` som ändrar SAMMA rad.
+Gren 1: `git switch -c oppettider-helg`, ändra `Helger: 09–16` till `Helger: 10–17` i `kafe-info/oppettider.md`, commit.
+Tillbaka: `git switch main`. Gren 2: `git switch -c oppettider-sommar`, ändra samma rad till `Helger: 09–18`, commit.
+
+Tillbaka: `git switch main`. Kör `git merge oppettider-helg` (går bra, en så kallad _fast-forward_).
+Kör sedan `git merge oppettider-sommar`. Nu får du CONFLICT.
 
 ### Steg 5. Lös konflikten
 
-Öppna `kafe-info/oppettider.md` i VS Code. Klistra in filen med markörerna i `docs/git-logg.md` (avsnitt 3) innan du ändrar något. Välj en av raderna, eller skriv en ny (till exempel `Helger: 10–18`), och ta bort ALLA tre markörrader (`<<<<<<<`, `=======`, `>>>>>>>`). Spara. `git add kafe-info/oppettider.md`, sedan `git commit` (spara standardmeddelandet). Kontrollera: `git status` ska vara rent och `git grep "<<<<<<<"` ska inte ge någon träff. Förklara i loggen vad markörerna betyder och hur du valde.
+Öppna `kafe-info/oppettider.md` i VS Code. Klistra in filen med markörerna i `docs/git-logg.md` (avsnitt 3) innan du ändrar något.
+
+Välj en av raderna, eller skriv en ny (till exempel `Helger: 10–18`), och ta bort ALLA tre markörrader (`<<<<<<<`, `=======`, `>>>>>>>`).
+Spara. `git add kafe-info/oppettider.md`, sedan `git commit` (spara standardmeddelandet).
+
+Kontrollera: `git status` ska vara rent och `git grep "<<<<<<<"` ska inte ge någon träff.
+Förklara i loggen vad markörerna betyder och hur du valde.
 
 ### Steg 6. Avbryt en merge
 
-Skapa en ny konflikt på samma sätt (två nya grenar som ändrar `Röda dagar: stängt` på varsitt sätt). Kör `git merge` så att du får konflikt, och avbryt sedan med `git merge --abort`. Kör `git status`: allt är som förut. Att kunna backa är det som gör konflikter ofarliga.
+Skapa en ny konflikt på samma sätt (två nya grenar som ändrar `Röda dagar: stängt` på varsitt sätt).
+
+Kör `git merge` så att du får konflikt, och avbryt sedan med `git merge --abort`.
+Kör `git status`: allt är som förut. Att kunna backa är det som gör konflikter ofarliga.
+
+**\*\*** Börja här
 
 ### Steg 7. Ångra säkert
 
@@ -70,11 +90,20 @@ Skapa en ny konflikt på samma sätt (två nya grenar som ändrar `Röda dagar: 
 
 ### Steg 8. Ignorera filer med .gitignore
 
-Skapa filerna `.env`, `debug.log` och `node_modules/x.txt` (mappen får du skapa själv). Kör `git status`: de syns. Skapa `.gitignore` med raderna `.env`, `*.log` och `node_modules/`. Kör `git status` igen: nu syns bara `.gitignore`. Commit. Förklara varför man aldrig ska committa en `.env`.
+Skapa filerna `.env`, `debug.log` och `node_modules/x.txt` (mappen får du skapa själv).
+Kör `git status`: de syns.
+Skapa `.gitignore` med raderna `.env`, `*.log` och `node_modules/`.
+Kör `git status` igen: nu syns bara `.gitignore`. Commit.
+
+Förklara varför man aldrig ska committa en `.env`.
 
 ### Steg 9. Pull request på ditt eget repo
 
-Skapa en gren `info-uppdatering`, ändra något i `kafe-info/`, committa och kör `git push -u origin info-uppdatering`. På GitHub: _Compare & pull request_. VIKTIGT: ändra _base repository_ till ditt EGET repo (som standard föreslår GitHub Lexicon-RC, och det vill du inte). Skriv en beskrivning, klicka _Create pull request_ och sedan _Merge pull request_. Lokalt: `git switch main`, `git pull`, `git branch -d info-uppdatering`. Klistra in länken i loggen (avsnitt 5).
+Skapa en gren `info-uppdatering`, ändra något i `kafe-info/`, committa och kör `git push -u origin info-uppdatering`.
+
+På GitHub: _Compare & pull request_. VIKTIGT: ändra _base repository_ till ditt EGET repo (som standard föreslår GitHub Lexicon-RC, och det vill du inte).
+
+Skriv en beskrivning, klicka _Create pull request_ och sedan _Merge pull request_. Lokalt: `git switch main`, `git pull`, `git branch -d info-uppdatering`. Klistra in länken i loggen (avsnitt 5).
 
 ### Steg 10. Fördjupning (frivillig): stash och cherry-pick
 
